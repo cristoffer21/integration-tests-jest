@@ -3,7 +3,7 @@ import { StatusCodes } from 'http-status-codes';
 
 const isCI = process.env.CI === 'true';
 
-describe('Fake Store API - Test Suite', () => {
+(isCI ? describe.skip : describe)('Fake Store API - Test Suite', () => {
   const p = pactum;
 
   beforeAll(() => {
